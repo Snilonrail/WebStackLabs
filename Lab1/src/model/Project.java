@@ -27,19 +27,19 @@ public class Project {
         projectMembers.forEach(this::addUser);
     }
 
-    public void addUser(@NotNull User User){
-        User.addProject(name, projectAdmins);
-        Users.add(User);
+    public void addUser(@NotNull User user){
+        user.addProject(name, projectAdmins);
+        Users.add(user);
     }
 
     public User chooseDevForTask() {
         return Users.stream().filter(u -> u.getUserRole().equals(Role.DEVELOPER) && u.getTaskNumber() < 2).findFirst().orElseThrow();
     }
 
-    public void removeUser(@NotNull User User){
-        User.removeFromProject(name, projectAdmins);
-        tasks.stream().filter(task -> Objects.nonNull(task.getAssignee())).collect(Collectors.toList()).removeIf(task -> task.getAssignee().equals(User));
-        Users.remove(User);
+    public void removeUser(@NotNull User user){
+        user.removeFromProject(name, projectAdmins);
+        tasks.stream().filter(task -> Objects.nonNull(task.getAssignee())).collect(Collectors.toList()).removeIf(task -> task.getAssignee().equals(user));
+        Users.remove(user);
     }
 
     public void addTask(Task task) {
