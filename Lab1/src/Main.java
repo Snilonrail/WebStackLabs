@@ -27,10 +27,10 @@ public class Main {
         lab1Project.addUser(new User("Linus Torvalds", Role.DEVELOPER));
         lab1Project.addTask(new Task(logger, "refactor lab 1", Status.ToDo));
         lab1Project.addUser(externalDev);
-        lab1Project.addTask(new Task(logger, "refactor lab 1", Status.ToDo));
+        lab1Project.addTask(new Task(logger, "refactor lab 2", Status.ToDo));
 
         var task1 = new Task(logger, "Setup EC2 instances");
-        var task2 = new Task(logger, "add VM support for AM64 Arch");
+        var task2 = new Task(logger, "add VM support for ARM64 Arch");
         var task3 = new Task(logger, "create landing page");
 
         task1.assignTask(lab1Project);
