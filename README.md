@@ -1,11 +1,11 @@
 # WEB tech stack labs
 
-Done/Provided for review:
+Done:
 Lab1,
 Lab2,
-Lab3
+Lab3,
+lab4
 
-In progress:
-Lab4,
+Provided for review:
 Lab5,
 Lab6
